@@ -4,7 +4,13 @@
 
 This project was about trying to create a program that simulates a __memory mangement unit__ handling __paged virtual memory__. The purpose is to demonstrate knowledge about how virtual addresses function, what a page table is, how the MMU translates virtual address, and translation lookaside buffers.
 
-## commands
+## Building 
+
+This program can be built on a posix compliant system using 
+
+> g++ main.cpp -o mmuSim.a
+
+## Commands
 
 The simulation for this program relies on a set of commands so it can read from a text file to operate as if was MMU handling the logic of Bitwise operations.
 
@@ -17,7 +23,7 @@ The list of commands are:
 
 anything else is an undefined commands and ends the program.
 
-## linear page table
+## Linear Page Table
 
 The make up of are simulated page table is:
 
@@ -28,7 +34,7 @@ The make up of are simulated page table is:
 
 all pages that are printed to the screen are the ones that are present in memory and not the swap buffer.
 
-## swap space
+## Swap Space
 
 The swap device is simulated and thus does not technically exist. However, the project specs required the concept of swaping pages from memory (since there is only so many pages that can fit) and the swap device. The swap space is simulated in this manner:
 
